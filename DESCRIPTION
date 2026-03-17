@@ -1,0 +1,15 @@
+Package: ggnepes
+Title: Nepes Corporate Color Palette for 'ggplot2'
+Version: 0.1.0
+Authors@R: person("Kay", "Park", email = "kspark@nepes.co.kr", role = c("aut", "cre"))
+Description: Provides color palettes and themes derived from the Nepes
+    corporate identity for use with 'ggplot2'. Includes discrete color
+    scales, SPC (Statistical Process Control) semantic palettes, and
+    complete 'ggplot2' themes for light and dark backgrounds.
+License: MIT + file LICENSE
+Imports: ggplot2 (>= 3.0.0)
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
