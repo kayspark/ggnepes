@@ -54,6 +54,8 @@ theme_nepes_dark <- function(base_size = 11, base_family = "") {
       plot.subtitle      = ggplot2::element_text(color = "#8A9199"),
       legend.background  = ggplot2::element_rect(fill = "#2E2C2A", color = NA),
       legend.key         = ggplot2::element_rect(fill = "#2E2C2A", color = NA),
+      legend.text        = ggplot2::element_text(color = "#DCD8D4"),
+      legend.title       = ggplot2::element_text(color = "#DCD8D4"),
       strip.background   = ggplot2::element_rect(fill = "#2E2C2A", color = NA),
       strip.text         = ggplot2::element_text(color = "#DCD8D4")
     )
