@@ -1,0 +1,67 @@
+#+TITLE: ggnepes — Nepes Color Palette for ggplot2
+#+AUTHOR: Kay Park
+
+Corporate color palette and themes for =ggplot2=, derived from the Nepes brand identity.
+WCAG AA accessible + colorblind-safe. Light theme default.
+
+* Screenshots
+
+** Light Theme
+[[file:docs/light.png]]
+
+** Dark Theme
+[[file:docs/dark.png]]
+
+/Data: UCI ML Repository SECOM Dataset (public sample, not production)/
+
+* Installation
+
+#+begin_src r
+devtools::install_github("kayspark/ggnepes")
+#+end_src
+
+* Usage
+
+#+begin_src r
+library(ggnepes)
+
+# Color scale (light default)
+ggplot(data, aes(x, y, color = group)) +
+  geom_line() +
+  scale_color_nepes() +
+  theme_nepes_light()
+
+# Dark theme
+ggplot(data, aes(x, y, fill = group)) +
+  geom_col() +
+  scale_fill_nepes(theme = "dark") +
+  theme_nepes_dark()
+
+# SPC control chart colors
+spc <- nepes_spc()
+# Returns: center_line, data_points, control_limit, spec_limit, violation
+#+end_src
+
+* Palette
+
+| # | Name   | Light Hex | Dark Hex  |
+|---+--------+-----------+-----------|
+| 1 | Blue   | =#23438E= | =#5C8CFF= |
+| 2 | Orange | =#C25609= | =#FEA413= |
+| 3 | Green  | =#017939= | =#3DDC84= |
+| 4 | Red    | =#C4181F= | =#FF5C5C= |
+| 5 | Teal   | =#2D7A82= | =#3A9BA5= |
+| 6 | Purple | =#873D8E= | =#A274C3= |
+
+Plus 6 midtone variants for 12-color charts.
+
+* API
+
+- =nepes_pal(theme, n)= — color vector (default: light, 12 colors)
+- =nepes_spc(theme)= — named SPC palette (center_line, data_points, control_limit, spec_limit, violation)
+- =scale_color_nepes(theme)= / =scale_fill_nepes(theme)= — ggplot2 discrete scales
+- =theme_nepes_light()= / =theme_nepes_dark()= — complete ggplot2 themes
+
+* Source
+
+Generated from [[https://github.com/kayspark/nepes-palette][nepes-palette]] — single source of truth for 23 tool themes.
