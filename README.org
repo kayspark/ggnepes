@@ -12,7 +12,7 @@ WCAG AA accessible + colorblind-safe. Light theme default.
 ** Dark Theme
 [[file:docs/dark.png]]
 
-/Data: UCI ML Repository SECOM Dataset (public sample, not production)/
+/9 chart types: geom_line, boxplot+jitter, density, SPC, ribbon, errorbar, smooth, density_2d_filled, histogram/
 
 * All 53 ggplot2 Geom Showcase
 
